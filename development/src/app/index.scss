@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../assets/fonts/bootstrap/glyphicons-halflings-regular.eot');
+    src: url('../assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../assets/fonts/bootstrap/glyphicons-halflings-regular.woff2') format('woff2'), url('../assets/fonts/bootstrap/glyphicons-halflings-regular.woff') format('woff'), url('../assets/fonts/bootstrap/glyphicons-halflings-regular.ttf') format('truetype'), url('../assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg'); 
+}
+
+.header{
+   .heading{ 
+    font-weight: bold;
+   }  
+}
+
+.sub-title{
+	color: white;
+	padding:10px;
+	margin-bottom: 20px;
+	
+}
+td.td-right{
+    text-align: right;
+}
+td.td-center{
+    text-align: center;
+}
+.input-append{
+    input{
+        height: 33px;
+    }
+}
+/***************************************/
+/* Do not add any styles to this file! */
+/***************************************/
+
+// injector
+// endinjector

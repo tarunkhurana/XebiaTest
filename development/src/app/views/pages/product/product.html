@@ -1,0 +1,60 @@
+<p class="text-info">
+    {{product.name}}: {{product.description}}<br />
+</p>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span8">
+
+            <!-- product info -->
+            <table class="table table-bordered">
+
+                <tr class="well">
+                    <td class="td-right" colspan="3" >
+                        <a href="#/cart" title="go to shopping cart">
+                            <i class="icon-shopping-cart"></i>
+                            <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><b>Calories</b></td>
+                    <td><h2>{{product.cal}}</h2></td>
+                    <td />
+                </tr>
+                <tr ng-repeat="product in product.calories">
+                    <td><b>{{product.calName}}</b></td>
+                    <td/>
+                    <td>{{product.calType}}</td>
+                </tr>
+
+                <tr class="well">
+                    <td class="td-right" colspan="3" >
+                        <a href="#/cart" title="go to shopping cart">
+                            <i class="icon-shopping-cart"></i>
+                            <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>                        </a>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <!-- buttons -->
+        <div class="span4">
+            <button 
+                class="btn btn-block btn-success" 
+                ng-click="cart.addItem(product.id, product.name, product.price, product.qty)">
+                <i class="icon-shopping-cart icon-white"></i> add to cart
+            </button>
+            <button 
+                class="btn btn-block btn-danger"  ng-disabled="cart.getTotalCount() < 1" ng-click="cart.addItem(product.id, product.name, product.price, -1)">
+                <i class="icon-trash icon-white"></i> remove from cart</button>
+            <button 
+                class="btn btn-block" 
+                onclick="window.location.href=''">
+                <i class="icon-chevron-left"></i> back to store
+            </button>
+        </div>
+    </div>
+</div>
+
